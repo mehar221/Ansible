@@ -1,0 +1,7 @@
+---
+ - name: executing script on slave
+   hosts: all
+   become: true
+   tasks:
+    - name: install nginx on slave server
+      apt: name=nginx state=latest
